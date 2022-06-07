@@ -16,7 +16,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     logger.err('payment denied');
     return res.send({ message: 'Only POST requests allowed' });
   }
-
   const { notificationCode } = req.body;
   const url = `https://ws.pagseguro.uol.com.br/v3/transactions/notifications/${notificationCode}?email=${email}&token=${token}`;
   try {
@@ -30,6 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const FIRSTNAME = partsOfName.shift();
 
     if (code > 299 || code < 200) {
+      logger.err(code);
       return res.send({ message: 'payment denied' });
     }
 
