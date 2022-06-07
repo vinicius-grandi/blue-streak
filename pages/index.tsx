@@ -10,7 +10,15 @@ import Footer from '../components/Footer';
 const Home: NextPage = () => (
   <>
     <NavBar style={{ backgroundColor: '#5b627e' }}>
-      <NavBar.Brand style={{ padding: '0.5rem', fontSize: '2rem' }}>BLUE STREAK</NavBar.Brand>
+      <NavBar.Brand style={{
+        padding: '0.5rem',
+        fontSize: '2rem',
+        fontFamily: "'Varela Round', sans-serif",
+      }}
+      >
+        BLUE STREAK
+
+      </NavBar.Brand>
     </NavBar>
     <main>
       <Container style={{ padding: '1rem', backgroundColor: '#5b627ebe', color: '#ebe7e7' }} fluid>
@@ -37,7 +45,7 @@ const Home: NextPage = () => (
           </Col>
         </Row>
         <Row>
-          <Col style={{ alignSelf: 'center' }} xl="4">
+          <Col style={{ alignSelf: 'center' }} xl="4" xs="5">
             <a href="https://trustlock.co" target="_blank" rel="noreferrer">
               <Image
                 alt="Trust Badges"
