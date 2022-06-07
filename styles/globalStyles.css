@@ -14,6 +14,7 @@ ul {
 
 li {
   margin-left: 1rem;
+  width: fit-content;
 }
 
 p {
@@ -31,4 +32,8 @@ p {
     font-weight: 600;
     margin: 0;
   }
+}
+
+.border-0 {
+  cursor: pointer;
 }
