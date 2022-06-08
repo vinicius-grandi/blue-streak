@@ -5,8 +5,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 export default function Footer(): JSX.Element {
   return (
-    <Container style={{ backgroundColor: '#5b627e' }} fluid>
-      <Row>
+    <Container style={{ backgroundColor: '#5b627e' }} fluid as="footer" className="mt-auto">
+      <Row style={{ color: 'white', fontWeight: 600 }}>
         <Col style={{ display: 'flex', flexDirection: 'column' }}>
           <p>information</p>
           <ListGroup as="ul">
